@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<jugadores>
+	<jugador>
+		<id>1</id>
+		<nombre>Thibaut Courtois</nombre>
+		<contrasenia>ADMIN123</contrasenia>
+		<dorsal>1</dorsal>
+		<edad>28</edad>
+		<peso>75</peso>
+		<altura>195</altura>
+	</jugador>
+	<jugador>
+		<id>2</id>
+		<nombre>Antonio Rudiger</nombre>
+		<contrasenia>ADMIN123</contrasenia>
+		<dorsal>4</dorsal>
+		<edad>26</edad>
+		<peso>81</peso>
+		<altura>184</altura>
+	</jugador>
+	<jugador>
+		<id>3</id>
+		<nombre>Toni Kroos</nombre>
+		<contrasenia>ADMIN123</contrasenia>
+		<dorsal>8</dorsal>
+		<edad>35</edad>
+		<peso>71</peso>
+		<altura>178</altura>
+	</jugador>
+	<jugador>
+		<id>4</id>
+		<nombre>Vinicius Junior</nombre>
+		<contrasenia>ADMIN123</contrasenia>
+		<dorsal>20</dorsal>
+		<edad>22</edad>
+		<peso>70</peso>
+		<altura>173</altura>
+	</jugador>
+</jugadores>

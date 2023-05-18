@@ -1,0 +1,15 @@
+﻿@if (Context.Session.GetObject<Jugador>("JUGADOR") != null)
+{
+    <li class="nav-item">
+        <a class="nav-link text-white" asp-area="" asp-controller="Jugadores" asp-action="PerfilJugador">Perfil</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" asp-area="" asp-controller="Jugadores" asp-action="LogoutJugador">Logout</a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-white" asp-area="" asp-controller="Jugadores" asp-action="LoginJugador">Login</a>
+    </li>
+}
