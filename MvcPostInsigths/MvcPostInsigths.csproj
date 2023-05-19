@@ -4,6 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationInsightsResourceId>/subscriptions/6a67aa8c-b484-46f1-aef5-cbb6fad3b88d/resourceGroups/rg-tajamar/providers/microsoft.insights/components/postinsightsfgg</ApplicationInsightsResourceId>
+    <UserSecretsId>5a1f5750-d851-4c00-9b17-f85e2b0a7953</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

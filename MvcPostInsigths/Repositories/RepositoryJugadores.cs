@@ -17,11 +17,11 @@ namespace MvcPostInsigths.Repositories
             documentJugadores = XDocument.Load(this.pathJugadores);
         }
 
-        public Jugador FindJugador(int idjugad)
+        public Jugador FindJugador(string nombre, string contrasenia)
         {
             var consulta = from datos in this.documentJugadores.Descendants("jugador")
-                           where datos.Element("id").Value ==
-                           idjugad.ToString()
+                           where datos.Element("nombre").Value == nombre && 
+                           datos.Element("contrasenia").Value == contrasenia
                            select datos;
 
             if (consulta.Count() == 0)
