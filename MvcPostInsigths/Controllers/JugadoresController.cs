@@ -19,9 +19,32 @@ namespace MvcPostInsigths.Controllers
             this._logger = logger;
             this.telemetryClient = client;
         }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public IActionResult LoginJugador()
         {
             return View();
+        }
+
+        public IActionResult PerfilJugador()
+        {
+            Jugador jug = HttpContext.Session.GetObject<Jugador>("JUGADOR");
+
+            if (jug != null)
+            {
+                string msg = "Acceso a perfil: " + jug.Nombre;
+                SeverityLevel level = SeverityLevel.Warning;
+                TraceTelemetry traza = new TraceTelemetry(msg, level);
+                this.telemetryClient.TrackTrace(traza);
+
+                return View(jug);
+            }
+
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -37,9 +60,18 @@ namespace MvcPostInsigths.Controllers
                 this.telemetryClient.TrackTrace(traza);
 
                 HttpContext.Session.SetObject("JUGADOR", jug);
+
+                return RedirectToAction("Index");
             }
 
+            ViewData["MENSAJE"] = "Credenciales incorrectas";
             return View();
+        }
+
+        public IActionResult LogoutJugador()
+        {
+            HttpContext.Session.Remove("JUGADOR");
+            return RedirectToAction("Index");
         }
     }
 }

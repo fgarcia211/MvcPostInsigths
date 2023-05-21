@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Jugador jug = Context.Session.GetObject<Jugador>("JUGADOR");
+}
+
+<div class="text-center">
+    <h1 class="display-4 my-5">App de Ejemplo para Azure Application Insights</h1>
+    @if (jug != null)
+    {
+        <h2 class="mb-5">Logueado como: @jug.Nombre</h2>
+    }
+    <p class="">Enlace de GitHub <a href="https://docs.microsoft.com/aspnet/core">Pulsa aquí</a>.</p>
+</div>
